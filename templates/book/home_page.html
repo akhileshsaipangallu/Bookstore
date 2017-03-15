@@ -1,0 +1,22 @@
+{% extends 'book/base.html' %}
+
+{% block middle_area %}
+    <h1>Welcome</h1>
+    <p>
+        Banking application is enterprise software that is used by the banking
+        industry. Typically banking software refers to Core Banking Software
+        and its interfaces that allows commercial banks to connect to
+        other modular software and to the interbank networks.
+        It can also refer to the trading software used by investment banks
+        to access capital markets.
+    </p>
+    <hr>
+    <h3></h3>
+    <p></p>
+{% endblock middle_area %}
+
+{% block right_side %}
+    <p><a href="{% url 'books' %}"><button type="button" class="btn btn-success">Books</button></a></p>
+    <p><a href="{% url 'authors' %}"><button type="button" class="btn btn-success">Authors</button></a></p>
+    <p><a href="{% url 'publishers' %}"><button type="button" class="btn btn-success">Publishers</button></a></p>
+{% endblock right_side %}

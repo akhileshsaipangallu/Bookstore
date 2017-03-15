@@ -1,0 +1,33 @@
+{% extends 'book/base.html' %}
+
+{% block head_title %}Publishers{% endblock head_title %}
+
+{% block middle_area %}
+    <div class="col-sm-10">
+            <div class="row">
+            {% if empty %}
+                <div><h1>No Publishers</h1></div>
+            {% else %}
+                <div><h1>Publishers</h1></div>
+                {% for obj in publisher_obj %}
+                    <div class="col-sm-12">
+                        <div class="thumbnail">
+                            <div class="caption">
+                                <h3><a href="{{ obj.get_absolute_url }}">{{ obj.name }}</a></h3>
+                                <small>
+                                    {{ obj.city }},
+                                    {{ obj.state }}<br>
+                                    {{ obj.country }}
+                                </small><br>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            {% endif %}
+        </div>
+    </div>
+{% endblock middle_area %}
+
+{% block right_side %}
+    <p><a href="{% url 'home_page' %}"><button type="button" class="btn btn-success">Back</button></a></p>
+{% endblock right_side %}

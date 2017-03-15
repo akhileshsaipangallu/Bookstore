@@ -1,0 +1,27 @@
+{% extends 'book/base.html' %}
+
+{% block head_title %}{{ author_obj.first_name }} {{ author_obj.last_name }}{% endblock head_title %}
+
+{% block middle_area %}
+    <div class="col-sm-10">
+        <div><h1>{{ author_obj.first_name }} {{ author_obj.last_name }}</h1></div>
+        <div class="col-sm-2">
+            <p>City</p>
+            <p>State</p>
+            <p>Country</p>
+            <p>Books</p>
+        </div>
+        <div class="col-sm-10">
+            <p>: {{ author_obj.city }}</p>
+            <p>: {{ author_obj.state }}</p>
+            <p>: {{ author_obj.country }}</p>
+            <p>: {{ author_obj.number_of_books }}</p>
+        </div>
+    </div>
+{% endblock middle_area %}
+
+{% block right_side %}
+    <div>
+        <p><a href="{% url 'authors' %}"><button type="button" class="btn btn-success">Back</button></a></p>
+    </div>
+{% endblock right_side %}

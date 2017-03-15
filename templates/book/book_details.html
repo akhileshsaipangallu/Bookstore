@@ -1,0 +1,27 @@
+{% extends 'book/base.html' %}
+
+{% block head_title %}{{ book_obj.title }}{% endblock head_title %}
+
+{% block middle_area %}
+    <div class="col-sm-10">
+        <div><h1>{{ book_obj.title }}</h1></div>
+        <div class="col-sm-2">
+            <p>Title</p>
+            <p>Author</p>
+            <p>Publisher</p>
+            <p>Price</p>
+        </div>
+        <div class="col-sm-10">
+            <p>: {{ book_obj.title }}</p>
+            <p>: {{ book_obj.author }}</p>
+            <p>: {{ book_obj.publisher }}</p>
+            <p>: {{ book_obj.price }} Rs.</p>
+        </div>
+    </div>
+{% endblock middle_area %}
+
+{% block right_side %}
+    <div>
+        <p><a href="{% url 'books' %}"><button type="button" class="btn btn-success">Back</button></a></p>
+    </div>
+{% endblock right_side %}
