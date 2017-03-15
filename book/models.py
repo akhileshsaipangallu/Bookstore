@@ -61,6 +61,11 @@ class Book(models.Model):
     price = models.FloatField()
     view_count = models.PositiveIntegerField(default=0)
 
+    def save(self, *args, **kwargs):
+        super(Book, self).save(*args, **kwargs)
+        self.author.view_count += self.view_count
+        self.author.save()
+
     def get_absolute_url(self):
         return reverse(
             'book_details',

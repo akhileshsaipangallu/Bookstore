@@ -8,6 +8,11 @@ from .models import Book
 from .models import Publisher
 
 
+def home_page(request):
+    context = {}
+    return render(request, 'book/home_page.html', context)
+
+
 def books(request):
     empty = False
     query_set = Book.objects.all()

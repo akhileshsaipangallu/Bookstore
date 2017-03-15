@@ -6,6 +6,7 @@ from django.conf.urls import url
 from . import views
 
 urlpatterns = [
+    url(r'^$', views.home_page, name='home_page'),
     url(r'^api/', include('book.api.urls')),
     url(r'^books/$', views.books, name='books'),
     url(r'^authors/$', views.authors, name='authors'),
