@@ -6,10 +6,10 @@ import views
 
 
 urlpatterns = [
-    url(r'^authors/top10/$', views.AuthorsTopTen.as_view(), name='books'),
-    # url(
-    #     r'^bank-(?P<ifsc>\w+)/$',
-    #     views.BankDetails.as_view(),
-    #     name='bank_details',
-    # ),
+    url(r'^authors/top10/$', views.authors_top_ten, name='authors_top_ten'),
+    url(
+        r'^authors/top10/rest/$',
+        views.authors_top_ten_rest,
+        name='authors_top_ten_rest'
+    ),
 ]

@@ -57,7 +57,7 @@ def book_details(request, book_id):
     context = {
         'book_obj': query_set,
     }
-    query_set.author.view_count +=1
+    query_set.author.view_count += 1
     query_set.author.save()
     query_set.view_count += 1
     query_set.save()

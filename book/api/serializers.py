@@ -10,13 +10,20 @@ class BookSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Book
-        fields = ['book_id', 'title', 'price', 'author', 'publisher']
-        # exclude = ['id', 'view_count']
+        fields = ['title']
 
 
 class AuthorSerializer(serializers.ModelSerializer):
+    name = serializers.ReadOnlyField(source='author_full_name')
+    books = serializers.SerializerMethodField()
 
     class Meta:
         model = Author
-        # fields = ['book_id', 'title', 'price', 'author', 'publisher']
-        exclude = ['id', 'view_count']
+        fields = ['name', 'books']
+
+    @staticmethod
+    def get_books(obj):
+        book_list = \
+            Book.objects.filter(author=obj).order_by('-view_count')[:10]
+        serializer = BookSerializer(book_list, many=True)
+        return serializer.data
