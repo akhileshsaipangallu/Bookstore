@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c3ada8bf-3ed8-4f61-a2ed-06a40542f611" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Bookstore/settings.py" afterPath="$PROJECT_DIR$/Bookstore/settings.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Bookstore/urls.py" afterPath="$PROJECT_DIR$/Bookstore/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/book/api/serializers.py" afterPath="$PROJECT_DIR$/book/api/serializers.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/rest_framework/docs/js/api.js" afterPath="$PROJECT_DIR$/static/rest_framework/docs/js/api.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -23,18 +19,7 @@
     <favorites_list name="Bookstore" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="serializers.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/book/api/serializers.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="293">
-              <caret line="28" column="0" lean-forward="true" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
