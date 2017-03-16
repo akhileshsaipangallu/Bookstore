@@ -23,7 +23,6 @@ class AuthorSerializer(serializers.ModelSerializer):
 
     @staticmethod
     def get_books(obj):
-        book_list = \
-            Book.objects.filter(author=obj).order_by('-view_count')[:10]
+        book_list = Book.objects.filter(author=obj).order_by('-view_count')[:10]
         serializer = BookSerializer(book_list, many=True)
         return serializer.data
